@@ -11,7 +11,7 @@ import (
 func TestPing(t *testing.T) {
 	t.Run("reachable", func(t *testing.T) {
 		srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			if r.URL.Path != "/health" {
+			if r.URL.Path != "/healthz" {
 				t.Errorf("unexpected path: %s", r.URL.Path)
 			}
 			w.WriteHeader(http.StatusOK)
