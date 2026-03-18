@@ -43,9 +43,9 @@ func (c *Client) doRequest(method, url string, body io.Reader) (*http.Response, 
 	return c.HTTP.Do(req)
 }
 
-// Ping checks if Qdrant is reachable via GET /health.
+// Ping checks if Qdrant is reachable via GET /healthz.
 func (c *Client) Ping() error {
-	resp, err := c.doRequest("GET", c.BaseURL+"/health", nil)
+	resp, err := c.doRequest("GET", c.BaseURL+"/healthz", nil)
 	if err != nil {
 		return fmt.Errorf("qdrant ping: %w", err)
 	}
