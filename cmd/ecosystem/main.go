@@ -65,6 +65,10 @@ func main() {
 	mux.HandleFunc("/api/wiring_patterns/", handlers.WiringPatternsHandler(qClient))
 	mux.HandleFunc("/api/wiring_patterns", handlers.WiringPatternsHandler(qClient))
 
+	// Domain knowledge (ADR-009a: field intelligence from refexplorer)
+	mux.HandleFunc("/api/domain_knowledge/", handlers.DomainKnowledgeHandler(qClient))
+	mux.HandleFunc("/api/domain_knowledge", handlers.DomainKnowledgeHandler(qClient))
+
 	// Create server
 	srv := &http.Server{
 		Addr:         ":" + port,
