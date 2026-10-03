@@ -79,3 +79,8 @@ docker compose up
 ## Governed By
 
 [ADR-006 — Ecosystem Layer](https://github.com/TAEM-DEV/adrs/blob/main/ADR-006.yaml) defines all hard constraints for this service.
+
+<!-- org-footer -->
+---
+
+<p align="center"><sub>Part of <a href="https://github.com/TAEM-DEV">TAEM</a> · mission control preflight for software integration · built by <a href="https://github.com/ry-ops">ry-ops</a></sub></p>
